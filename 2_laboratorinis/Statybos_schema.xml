@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://example.com/statybos_imone" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://example.com/statybos_imone" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Statybos_imone" type="statybos_imone">
+        <xs:keyref name="projectKeyRef" refer="projectKey">
+            <xs:selector xpath=".//Projekto_suvestine"/>
+            <xs:field xpath="Kodas"/>
+        </xs:keyref>
+        <xs:key name="projectKey">
+            <xs:selector xpath=".//Projektas"/>
+            <xs:field xpath="Trumpinys"/>
+        </xs:key>
+    </xs:element>
+
+    <xs:complexType name="statybos_imone">
+        <xs:sequence>
+            <xs:element name="Pavadinimas" type="pavadinimas"/>
+            <xs:element name="Projektu_suvestine" type="projektu_suvestine"/>
+            <xs:element name="Projektai" type="projektai"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="Vardas">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="kalba">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]{2,3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="kalbos">
+        <xs:list itemType="kalba"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="pavadinimas">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9 _]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="pavadinimo_apvalkas">
+        <xs:simpleContent>
+            <xs:extension base="pavadinimas"/>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="projektu_suvestine">
+        <xs:sequence>
+            <xs:element name="Projekto_suvestine" type="projekto_suvestine" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="projekto_suvestine">
+        <xs:sequence>
+            <xs:element name="Kodas" type="pavadinimo_trumpinys"/>
+            <xs:element name="Kaina" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="projektai">
+        <xs:sequence>
+            <xs:element name="Projektas" type="Projektas" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="projekto_pavadinimas">
+        <xs:simpleContent>
+            <xs:extension base="pavadinimas">
+                <xs:attribute name="kalbos" type="kalbos"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="pavadinimo_trumpinys">
+        <xs:simpleContent>
+            <xs:restriction base="pavadinimo_apvalkas">
+                <xs:minLength value="4"/>
+                <xs:maxLength value="8"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Projektas" mixed="true">
+        <xs:sequence>
+            <xs:element name="Pavadinimas" type="projekto_pavadinimas"/>
+            <xs:element name="Trumpinys" type="pavadinimo_trumpinys"/>
+            <xs:element name="Pradzios_data" type="xs:date"/>
+            <xs:element name="Prioritetas" type="xs:integer"/>
+            <xs:choice>
+                <xs:element name="Komanda" type="komanda"/>
+                <xs:element name="Vadovu_komanda" type="vadovu_komanda"/>
+                <xs:element name="Rangovas" type="rangovas"/>
+                <xs:element name="Rangovas_ir_subrangovai" type="rangovas_su_subrangovais"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="salis" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="komanda">
+        <xs:sequence>
+            <xs:element name="Darbuotojas" type="Darbuotojas" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="vadovu_komanda">
+        <xs:sequence>
+            <xs:element name="Vadovas" type="Vadovas" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rangovas">
+        <xs:sequence>
+            <xs:element name="Adresas" type="xs:string"/>
+            <xs:element name="Tel_nr" type="xs:string"/>
+            <xs:element name="Pavadinimas" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rangovas_su_subrangovais">
+        <xs:complexContent>
+            <xs:extension base="rangovas">
+                <xs:sequence>
+                    <xs:element name="Subrangovai">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="Subrangovas" type="rangovas" minOccurs="1" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="atlyginimas">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="val" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Darbuotojas">
+        <xs:sequence>
+            <xs:element name="Vardas" type="Vardas"/>
+            <xs:element name="Pavarde" type="xs:string"/>
+            <xs:element name="Pareigos" type="xs:string"/>
+            <xs:element name="Atlyginimas" type="atlyginimas"/>
+        </xs:sequence>
+        <xs:attribute name="tipas" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Vadovas">
+        <xs:complexContent>
+            <xs:restriction base="Darbuotojas">
+                <xs:sequence>
+                    <xs:element name="Vardas" type="Vardas"/>
+                    <xs:element name="Pavarde" type="xs:string"/>
+                    <xs:element name="Pareigos" type="xs:string"/>
+                    <xs:element name="Atlyginimas" type="atlyginimas"/>
+                </xs:sequence>
+                <xs:attribute name="tipas" type="xs:string" fixed="vadovas"/>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

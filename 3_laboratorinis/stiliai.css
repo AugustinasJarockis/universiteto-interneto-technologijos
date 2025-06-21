@@ -1,0 +1,65 @@
+body {
+    background: beige;
+}
+
+header {
+    background: bisque;
+    border-width: medium;
+    border-color: saddlebrown;
+}
+
+main article p {
+    color: #333333;
+}
+
+form p {
+    color: black !important;
+}
+
+p > a {
+    color: inherit;
+}
+
+th {
+    border: black solid 3px;
+}
+
+table, tr, td {
+    font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    text-align: right;
+    border: black solid 1px;
+    border-collapse: collapse;
+}
+
+input[required] {
+    background: #FFDDDD;
+}
+
+article {
+    background: #EEDDDD;
+
+    img {
+        width: 100%;
+        max-width: 670px;
+    }
+}
+
+article.forma   {
+    background: #EEAAAA;
+}
+
+#sutikimof {
+    accent-color: #99FF99;
+}
+
+footer {
+    margin-top: 10px;
+    background: #ac6433;
+}
+
+@media screen and (max-width: 800px) {
+    .mediahideable {
+        display: none;
+    }
+}

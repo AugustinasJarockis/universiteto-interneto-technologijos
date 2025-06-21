@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/statybos_imone.schema.json",
+  "title": "Statybos_imone",
+  "description": "Schema aprasanti statybu imones json formata",
+  "type": "object",
+  "properties":{
+    "Statybos_imone": {
+      "type": "object",
+      "properties": {
+        "Pavadinimas": {
+          "type": "string"
+        },
+        "Projektu_suvestine": {
+          "$ref": "#/$def/Projektu_suvestine"
+        },
+        "Projektai": {
+          "$ref": "#/$def/Projektai"
+        }
+      },
+      "required": ["Pavadinimas", "Projektu_suvestine", "Projektai"],
+      "addtionalProperties": false
+    }
+  },
+
+  "$def": {
+    "Projektu_suvestine": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$def/Projekto_suvestine"
+      }
+    },
+
+    "Projekto_suvestine": {
+      "type": "object",
+      "properties": {
+        "Kodas": {
+          "type": "string"
+        },
+        "Kaina": {
+          "type": "number"
+        }
+      }
+    },
+
+    "Projektai": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$def/Projektas"
+      }
+    },
+
+    "Projektas": {
+      "type": "object",
+      "properties": {
+        "salis": {
+          "type": "string"
+        },
+        "Pavadinimas": {
+          "$ref": "#/$def/Projekto_pavadinimas"
+        },
+        "Trumpinys": {
+          "type": "string",
+          "pattern": "[a-zA-Z0-9_]{4,8}"
+        },
+        "Pradzios_data": {
+          "type": "string",
+          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2}"
+        },
+        "Prioritetas": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "Komanda": {
+          "$ref": "#/$def/Komanda"
+        },
+        "Rangovas": {
+          "$ref": "#/$def/Rangovas"
+        },
+        "Rangovas_ir_subrangovai": {
+          "$ref": "#/$def/Rangovas_ir_subrangovai"
+        }
+      },
+
+      "oneOf": [
+        {"required": ["Komanda"]},
+        {"required": ["Rangovas"]},
+        {"required": ["Rangovas_ir_subrangovai"]}
+      ]
+    },
+
+    "Projekto_pavadinimas": {
+      "type": "object",
+      "properties": {
+        "kalba": {
+          "type": "string"
+        },
+        "Tekstas": {
+          "type": "string"
+        }
+      }
+    },
+
+    "Komanda": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$def/Darbuotojas"
+      },
+      "minItems": 1
+    },
+
+    "Darbuotojas": {
+      "type": "object",
+      "properties": {
+        "tipas": {
+          "enum": [
+            "samdytinis",
+            "konsultantas",
+            "vadovas"
+          ]
+        },
+        "Vardas": {
+          "type": "string",
+          "maxLength": 256,
+          "minLength": 1
+        },
+        "Pavarde": {
+          "type": "string",
+          "maxLength": 256,
+          "minLength": 1
+        },
+        "Pareigos": {
+          "type": "string"
+        },
+        "Atlyginimas": {
+          "type": "object",
+          "properties": {
+            "val": {
+              "type": "string"
+            },
+            "suma": {
+              "type": "number",
+              "maximum": 100000.00
+            }
+          }
+        }
+      }
+    },
+
+    "Rangovas": {
+      "type": "object",
+      "properties": {
+        "Adresas": {
+          "type": "string"
+        },
+        "Tel_nr": {
+          "type": "string"
+        },
+        "Padinimas": {
+          "type": "string"
+        }
+      }
+    },
+
+    "Rangovas_ir_subrangovai": {
+      "type": "object",
+      "properties": {
+        "Adresas": {
+          "type": "string"
+        },
+        "Tel_nr": {
+          "type": "string"
+        },
+        "Pavadinimas": {
+          "type": "string"
+        },
+        "Subrangovai": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$def/Rangovas"
+          }
+        }
+      }
+    }
+  }
+}

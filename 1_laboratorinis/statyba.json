@@ -1,0 +1,148 @@
+{
+  "Statybos_imone": {
+    "Pavadinimas": "Stata",
+    "Projektai": [
+      {
+        "salis": "Lietuva",
+        "Pavadinimas": {
+          "kalba": "lt",
+          "Tekstas": "Valakampiu tiltas"
+        },
+        "Pradzios_data" : "2021-05-01",
+        "Prioritetas": 5,
+        "Komanda": [
+          {
+            "tipas": "samdytinis",
+            "Vardas": "Pranas",
+            "Pavarde": "Juskus",
+            "Pareigos": "Statybininkas",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 2000.00
+            }
+          },
+          {
+            "tipas": "vadovas",
+            "Vardas": "Algirdas",
+            "Pavarde": "Duzgys",
+            "Pareigos": "Architektas",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 5000.89
+            }
+          },
+          {
+            "tipas": "konsultantas",
+            "Vardas": "Algimantas",
+            "Pavarde": "Pliateris",
+            "Pareigos": "Aplinkosaugos ekspertas",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 4000.53
+            }
+          }
+        ]
+      },
+      {
+        "salis": "Ispanija",
+        "Pavadinimas": {
+          "kalba": "es",
+          "Tekstas": "Tronco de rio"
+        },
+        "Pradzios_data" : "2023-02-10",
+        "Prioritetas": 3,
+        "Komanda": [
+          {
+            "tipas": "vadovas",
+            "Vardas": "Mantas",
+            "Pavarde": "Virbelis",
+            "Pareigos": "Projekto koordinatorius",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 6000.99
+            }
+          },
+          {
+            "tipas": "samdytinis",
+            "Vardas": "Juan",
+            "Pavarde": "Castor",
+            "Pareigos": "Statybininkas",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 2000.01
+            }
+          },
+          {
+            "tipas": "samdytinis",
+            "Vardas": "Miguel",
+            "Pavarde": "Nutria",
+            "Pareigos": "Krano operatorius",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 2500.50
+            }
+          },
+          {
+            "tipas": "konsultantas",
+            "Vardas": "John",
+            "Pavarde": "Smith",
+            "Pareigos": "Tarptautines komandos koordinatorius",
+            "Atlyginimas": {
+              "val": "usd",
+              "suma": 4000.00
+            }
+          }
+        ]
+      },
+      {
+        "Pavadinimas": {
+          "kalba": "en",
+          "Tekstas": "Rail Baltica"
+        },
+        "Pradzios_data" : "2025-06-01",
+        "Prioritetas": 10,
+        "Komanda": [
+          {
+            "tipas": "vadovas",
+            "Vardas": "Simonas",
+            "Pavarde": "Latgalis",
+            "Pareigos": "Vyriausiasis inžinierius",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 8999.99
+            }
+          },
+          {
+            "tipas": "konsultantas",
+            "Vardas": "Ineta",
+            "Pavarde": "Tiruma",
+            "Pareigos": "Europos Sajungos teises eksperte",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 5000.11
+            }
+          },
+          {
+            "tipas": "konsultantas",
+            "Vardas": "Marten",
+            "Pavarde": "Liiv",
+            "Pareigos": "Aplinkosaugos ekspertas",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 3500.50
+            }
+          },
+          {
+            "Vardas": "Laura",
+            "Pavarde": "Kilmiene",
+            "Pareigos": "Zemes pirkimu koordinatore",
+            "Atlyginimas": {
+              "val": "eur",
+              "suma": 3000.00
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

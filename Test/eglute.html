@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eglute</title>
+</head>
+<body>
+  <canvas id="canvas" width="1000" height="1000"></canvas>
+  <script>
+    let ctx;
+
+    function drawBase(){
+      ctx.beginPath();
+      ctx.lineTo(200, 0);
+      ctx.lineTo(200, 100);
+      ctx.lineTo(100, 100);
+      ctx.lineTo(100, 200);
+      ctx.lineTo(0, 200);
+      ctx.lineTo(0, 0);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    function drawRecursive(recursionCount, firstRecursion){
+      if(recursionCount > 1){
+        if (showFirst || invertAnimation) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#FF5500";
+          ctx.transform(t1.a, t1.b, t1.c, t1.d, t1.e, t1.f);
+          drawRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showSecond || invertAnimation) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#00FF00";
+          ctx.transform(t2.a, t2.b, t2.c, t2.d, t2.e, t2.f);
+          drawRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showThird || invertAnimation) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#5500FF";
+          ctx.transform(t3.a, t3.b, t3.c, t3.d, t3.e, t3.f);
+          drawRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showFourth || invertAnimation) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#0088FF";
+          ctx.transform(t4.a, t4.b, t4.c, t4.d, t4.e, t4.f);
+          drawRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        return;
+      }
+      if(recursionCount == 0){
+        drawBase();
+      }
+      else {
+        if (showFirst || invertAnimation) {
+          ctx.save();
+          if (useColor && (!firstTransformationColour || firstRecursion))
+            ctx.fillStyle = "#FF5500";
+          ctx.transform(t1.a, t1.b, t1.c, t1.d, t1.e, t1.f);
+          drawBase();
+          ctx.restore();
+        }
+
+        if (showSecond || invertAnimation) {
+          ctx.save();
+          if (useColor && (!firstTransformationColour || firstRecursion))
+            ctx.fillStyle = "#00FF00";
+          ctx.transform(t2.a, t2.b, t2.c, t2.d, t2.e, t2.f);
+          drawBase();
+          ctx.restore();
+        }
+
+        if (showThird || invertAnimation) {
+          ctx.save();
+          if (useColor && (!firstTransformationColour || firstRecursion))
+            ctx.fillStyle = "#5500FF";
+          ctx.transform(t3.a, t3.b, t3.c, t3.d, t3.e, t3.f);
+          drawBase();
+          ctx.restore();
+        }
+
+        if (showFourth || invertAnimation) {
+          ctx.save();
+          if (useColor && (!firstTransformationColour || firstRecursion))
+            ctx.fillStyle = "#0088FF";
+          ctx.transform(t4.a, t4.b, t4.c, t4.d, t4.e, t4.f);
+          drawBase();
+          ctx.restore();
+        }
+      }
+    }
+
+    function drawAnimatedRecursive(recursionCount, firstRecursion) {
+      if(recursionCount > 1){
+        if (showFirst) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#FF5500";
+          ctx.transform(t1.a, t1.b, t1.c, t1.d, t1.e, t1.f);
+          drawAnimatedRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showSecond) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#00FF00";
+          ctx.transform(t2.a, t2.b, t2.c, t2.d, t2.e, t2.f);
+          drawAnimatedRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showThird) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#5500FF";
+          ctx.transform(t3.a, t3.b, t3.c, t3.d, t3.e, t3.f);
+          drawAnimatedRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showFourth) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#0088FF";
+          ctx.transform(t4.a, t4.b, t4.c, t4.d, t4.e, t4.f);
+          drawAnimatedRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        return;
+      }
+      if(recursionCount == 0){
+        drawBase();
+        return;
+      }
+
+      if (showFirst) {
+        ctx.save();
+        if (useColor && (!firstTransformationColour || firstRecursion))
+          ctx.fillStyle = "#FF5500";
+        ctx.transform(a_t1.a, a_t1.b, a_t1.c, a_t1.d, a_t1.e, a_t1.f);
+        drawBase();
+        ctx.restore();
+      }
+
+      if (showSecond) {
+        ctx.save();
+        if (useColor && (!firstTransformationColour || firstRecursion))
+          ctx.fillStyle = "#00FF00";
+        ctx.transform(a_t2.a, a_t2.b, a_t2.c, a_t2.d, a_t2.e, a_t2.f);
+        drawBase();
+        ctx.restore();
+      }
+
+      if (showThird) {
+        ctx.save();
+        if (useColor && (!firstTransformationColour || firstRecursion))
+          ctx.fillStyle = "#5500FF";
+        ctx.transform(a_t3.a, a_t3.b, a_t3.c, a_t3.d, a_t3.e, a_t3.f);
+        drawBase();
+        ctx.restore();
+      }
+
+      if (showFourth) {
+        ctx.save();
+        if (useColor && (!firstTransformationColour || firstRecursion))
+          ctx.fillStyle = "#0088FF";
+        ctx.transform(a_t4.a, a_t4.b, a_t4.c, a_t4.d, a_t4.e, a_t4.f);
+        drawBase();
+        ctx.restore();
+      }
+    }
+
+    function drawPartiallyAnimatedRecursive(recursionCount, firstRecursion) {
+      if (recursionCount > 1) {
+        if (showFirst) {
+          ctx.save();
+          if (useColor && firstTransformationColour  && firstRecursion)
+            ctx.fillStyle = "#FF5500";
+          ctx.transform(a_t1.a, a_t1.b, a_t1.c, a_t1.d, a_t1.e, a_t1.f);
+          drawRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showSecond) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#00FF00";
+          ctx.transform(a_t2.a, a_t2.b, a_t2.c, a_t2.d, a_t2.e, a_t2.f);
+          drawRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showThird) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#5500FF";
+          ctx.transform(a_t3.a, a_t3.b, a_t3.c, a_t3.d, a_t3.e, a_t3.f);
+          drawRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        if (showFourth) {
+          ctx.save();
+          if (useColor && firstTransformationColour && firstRecursion)
+            ctx.fillStyle = "#0088FF";
+          ctx.transform(a_t4.a, a_t4.b, a_t4.c, a_t4.d, a_t4.e, a_t4.f);
+          drawRecursive(recursionCount - 1, false);
+          ctx.restore();
+        }
+
+        return;
+      }
+      if(recursionCount == 0){
+        drawBase();
+        return;
+      }
+
+      if (showFirst) {
+        ctx.save();
+        if (useColor && (!firstTransformationColour || firstRecursion))
+          ctx.fillStyle = "#FF5500";
+        ctx.transform(a_t1.a, a_t1.b, a_t1.c, a_t1.d, a_t1.e, a_t1.f);
+        drawBase();
+        ctx.restore();
+      }
+
+      if (showSecond) {
+        ctx.save();
+        if (useColor && (!firstTransformationColour || firstRecursion))
+          ctx.fillStyle = "#00FF00";
+        ctx.transform(a_t2.a, a_t2.b, a_t2.c, a_t2.d, a_t2.e, a_t2.f);
+        drawBase();
+        ctx.restore();
+      }
+
+      if (showThird) {
+        ctx.save();
+        if (useColor && (!firstTransformationColour || firstRecursion))
+          ctx.fillStyle = "#5500FF";
+        ctx.transform(a_t3.a, a_t3.b, a_t3.c, a_t3.d, a_t3.e, a_t3.f);
+        drawBase();
+        ctx.restore();
+      }
+
+      if (showFourth) {
+        ctx.save();
+        if (useColor && (!firstTransformationColour || firstRecursion))
+          ctx.fillStyle = "#0088FF";
+        ctx.transform(a_t4.a, a_t4.b, a_t4.c, a_t4.d, a_t4.e, a_t4.f);
+        drawBase();
+        ctx.restore();
+      }
+    }
+
+    function setupDrawing(){
+      ctx.clearRect(0, 0, 5000, 5000);
+      ctx.save();
+      drawBorder();
+      ctx.translate(100, 100);
+      ctx.scale(10, 10);
+    }
+
+    function drawBorder(){
+      ctx.save();
+      ctx.beginPath();
+      ctx.lineTo(2100, 100);
+      ctx.lineTo(2100, 2100);
+      ctx.lineTo(100, 2100);
+      ctx.lineTo(100, 100);
+      ctx.closePath();
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawBaseOnly(){
+      setupDrawing();
+      drawBase();
+      ctx.restore();
+    }
+
+    function updateAnimationProgress(){
+      animProgress += 0.01;
+      if (animProgress >= 1.01){
+        animProgress = 0;
+        clearInterval(intervalHandle);
+      }
+    }
+
+    let intervalHandle = 1;
+    function drawAnimated() {
+      if(customRecursionCount >= 1){
+        recalculateAnimationMatrices();
+        setupDrawing();
+        drawAnimatedRecursive(customRecursionCount, true);
+        ctx.restore();
+        updateAnimationProgress();
+      }
+      else {
+        drawBaseOnly();
+      }
+    }
+
+    function drawInvertedAnimated() {
+      if(customRecursionCount >= 1){
+        recalculateAnimationMatrices();
+        setupDrawing();
+        drawPartiallyAnimatedRecursive(customRecursionCount, true);
+        ctx.restore();
+        updateAnimationProgress();
+      }
+      else {
+        drawBaseOnly();
+      }
+    }
+
+    function updateRecursiveAnimationProgress(){
+      animProgress += 0.01;
+      if (animProgress >= 1.01){
+        animProgress = 0;
+        if(currentRecursion >= customRecursionCount)
+          clearInterval(intervalHandle);
+        currentRecursion++;
+      }
+    }
+
+    let currentRecursion = 1;
+    function drawRecursiveAnimated() {
+      if(customRecursionCount >= 1){
+        recalculateAnimationMatrices();
+        setupDrawing();
+        drawAnimatedRecursive(currentRecursion, true);
+        ctx.restore();
+        updateRecursiveAnimationProgress();
+      }
+      else {
+        drawBaseOnly();
+      }
+    }
+
+    function drawInvertedRecursiveAnimated() {
+      if(customRecursionCount >= 1){
+        recalculateAnimationMatrices();
+        setupDrawing();
+        drawPartiallyAnimatedRecursive(currentRecursion, true);
+        ctx.restore();
+        updateRecursiveAnimationProgress();
+      }
+      else {
+        drawBaseOnly();
+      }
+    }
+
+    function draw() {
+      clearInterval(intervalHandle);
+      if(animated) {
+        animProgress = 0;
+        if (recursiveAnimation){
+          currentRecursion = 1;
+          if (invertAnimation){
+            intervalHandle = setInterval(drawInvertedRecursiveAnimated, animSpeed);
+          }
+          else {
+            intervalHandle = setInterval(drawRecursiveAnimated, animSpeed);
+          }
+        }
+        else if (invertAnimation) {
+          intervalHandle = setInterval(drawInvertedAnimated, animSpeed);
+        }
+        else {
+          intervalHandle = setInterval(drawAnimated, animSpeed);
+        }
+      }
+      else {
+        setupDrawing();
+        drawRecursive(customRecursionCount, true);
+        ctx.restore();
+      }
+    }
+
+    const canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+    draw();
+  </script>
+</body>
+</html>

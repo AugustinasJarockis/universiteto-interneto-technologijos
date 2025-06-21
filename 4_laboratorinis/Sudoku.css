@@ -1,0 +1,59 @@
+.langelis {
+    width: 33.33%;
+    height: 33.33%;
+    padding: 2px;
+    border-width: 1px;
+    box-sizing:border-box;
+    text-align: center;
+    display: compact;
+}
+
+.group {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    min-height: 90px;
+    border: 2px solid black;
+    border-radius: 4px;
+    align-content: center;
+}
+
+.group-row {
+    height: 90px;
+    display: flex;
+}
+
+.validation-board {
+    display: none;
+    background: #88FF88;
+    height: 50px;
+    width: 260px;
+    padding: 10px;
+    align-content: center;
+
+    p {
+        text-align: center;
+    }
+}
+
+.flex-box {
+    display: flex;
+}
+
+.correct-display {
+    display: none;
+    min-height: 50px;
+    width: 260px;
+    padding: 0px;
+    align-content: center;
+    margin-left: 50px;
+}
+
+div:has(#teisingas-sudoku) {
+    height: auto;
+    align-content: normal;
+}
+
+body {
+    background: beige;
+}

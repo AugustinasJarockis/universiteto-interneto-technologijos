@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4 laboratorinis. Sudoku</title>
+    <script type="module" src="/Sudoku.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Sudoku.css">
+</head>
+<body>
+    <button id="changeSudoku">Pakeisti sudoku</button>
+    <br>
+    <br>
+    <div class="flex-box">
+        <div class="validation-board">
+            <p>Teisingai.</p>
+        </div>
+        <div class="correct-display" id="teisingas-tekstas">
+            <p>Teisingas atsakymas:</p>
+        </div>
+    </div>
+    <br>
+    <div class="flex-box">
+        <form class="sudoku" id="sudoku">
+            <div id="lentele">
+                <div id="first-row" class="group-row">
+                    <div id="first" class="group">
+
+                    </div>
+                    <div id="second" class="group">
+
+                    </div>
+                    <div id="third" class="group">
+
+                    </div>
+                </div>
+                <div id="second-row" class="group-row">
+                    <div id="fourth" class="group">
+
+                    </div>
+                    <div id="fifth" class="group">
+
+                    </div>
+                    <div id="sixth" class="group">
+
+                    </div>
+                </div>
+                <div id="third-row" class="group-row">
+                    <div id="seventh" class="group">
+
+                    </div>
+                    <div id="eight" class="group">
+
+                    </div>
+                    <div id="ninth" class="group">
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <input type="submit" value="Tikrinti">
+            <input type="reset" value="Išvalyti">
+        </form>
+
+        <div class="correct-display">
+            <form class="sudoku" id="teisingas-sudoku">
+                <div id="lentele-good">
+                    <div id="first-row-good" class="group-row">
+                        <div id="first-good" class="group">
+
+                        </div>
+                        <div id="second-good" class="group">
+
+                        </div>
+                        <div id="third-good" class="group">
+
+                        </div>
+                    </div>
+                    <div id="second-row-good" class="group-row">
+                        <div id="fourth-good" class="group">
+
+                        </div>
+                        <div id="fifth-good" class="group">
+
+                        </div>
+                        <div id="sixth-good" class="group">
+
+                        </div>
+                    </div>
+                    <div id="third-row-good" class="group-row">
+                        <div id="seventh-good" class="group">
+
+                        </div>
+                        <div id="eight-good" class="group">
+
+                        </div>
+                        <div id="ninth-good" class="group">
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>0</script>
+</body>
+</html>

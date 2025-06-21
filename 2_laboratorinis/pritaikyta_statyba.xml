@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Statybos_imone xmlns="http://example.com/statybos_imone">
+    <Pavadinimas>Stata</Pavadinimas>
+    <Projektu_suvestine>
+        <Projekto_suvestine>
+            <Kodas>Vlktilt</Kodas>
+            <Kaina>380000.50</Kaina>
+        </Projekto_suvestine>
+    </Projektu_suvestine>
+    <Projektai>
+        <Projektas salis="Lietuva">
+            <Pavadinimas kalbos="lt">Valakampiu tiltas</Pavadinimas>
+            <Trumpinys>Vlktilt</Trumpinys>
+            <Pradzios_data>2021-05-01</Pradzios_data>
+            <Prioritetas>5</Prioritetas>
+            <Komanda xmlns:k="http://www.example.com/komanda">
+                <Darbuotojas tipas="samdytinis">
+                    <Vardas>Pranas</Vardas>
+                    <Pavarde>Juskus</Pavarde>
+                    <Pareigos>Statybininkas</Pareigos>
+                    <Atlyginimas val="eur">2000.00</Atlyginimas>
+                </Darbuotojas>
+                <Darbuotojas tipas="vadovas">
+                    <Vardas>Algirdas</Vardas>
+                    <Pavarde>Duzgys</Pavarde>
+                    <Pareigos>Architektas</Pareigos>
+                    <Atlyginimas val="eur">5000.89</Atlyginimas>
+                </Darbuotojas>
+                <Darbuotojas tipas="konsultantas">
+                    <Vardas>Algimantas</Vardas>
+                    <Pavarde>Pliateris</Pavarde>
+                    <Pareigos>Aplinkosaugos ekspertas</Pareigos>
+                    <Atlyginimas val="eur">4000.53</Atlyginimas>
+                </Darbuotojas>
+            </Komanda>
+        </Projektas>
+        <Projektas salis="Ispanija">
+            <Pavadinimas kalbos="es">Tronco de rio</Pavadinimas>
+            <Trumpinys>trcrio</Trumpinys>
+            <Pradzios_data>2023-02-10</Pradzios_data>
+            <Prioritetas>3</Prioritetas>
+            <Komanda xmlns:k="http://www.example.com/komanda">
+                <Darbuotojas tipas="vadovas">
+                    <Vardas>Mantas</Vardas>
+                    <Pavarde>Virbelis</Pavarde>
+                    <Pareigos>Projekto koordinatorius</Pareigos>
+                    <Atlyginimas val="eur">6000.99</Atlyginimas>
+                </Darbuotojas>
+                <Darbuotojas tipas="samdytinis">
+                    <Vardas>Juan</Vardas>
+                    <Pavarde>Castor</Pavarde>
+                    <Pareigos>Statybininkas</Pareigos>
+                    <Atlyginimas val="eur">2000.01</Atlyginimas>
+                </Darbuotojas>
+                <Darbuotojas tipas="samdytinis">
+                    <Vardas>Miguel</Vardas>
+                    <Pavarde>Nutria</Pavarde>
+                    <Pareigos>Krano operatorius</Pareigos>
+                    <Atlyginimas val="eur">2500.50</Atlyginimas>
+                </Darbuotojas>
+                <Darbuotojas tipas="konsultantas">
+                    <Vardas>John</Vardas>
+                    <Pavarde>Smith</Pavarde>
+                    <Pareigos>Tarptautines komandos koordinatorius</Pareigos>
+                    <Atlyginimas val="usd">4000.00</Atlyginimas>
+                </Darbuotojas>
+            </Komanda>
+        </Projektas>
+        <Projektas>
+            <Pavadinimas kalbos="en lt">Rail Baltica</Pavadinimas>
+            <Trumpinys>railbalt</Trumpinys>
+            <Pradzios_data>2025-06-01</Pradzios_data>
+            <Prioritetas>10</Prioritetas>
+            <Komanda xmlns:k="http://www.example.com/komanda">
+                <Darbuotojas tipas="vadovas">
+                    <Vardas>Simonas</Vardas>
+                    <Pavarde>Latgalis</Pavarde>
+                    <Pareigos>Vyriausiasis inžinierius</Pareigos>
+                    <Atlyginimas val="eur">8999.99</Atlyginimas>
+                </Darbuotojas>
+                <Darbuotojas tipas="konsultantas">
+                    <Vardas>Ineta</Vardas>
+                    <Pavarde>Tiruma</Pavarde>
+                    <Pareigos>Europos Sajungos teises eksperte</Pareigos>
+                    <Atlyginimas val="eur">5000.11</Atlyginimas>
+                </Darbuotojas>
+                <Darbuotojas tipas="konsultantas">
+                    <Vardas>Marten</Vardas>
+                    <Pavarde>Liiv</Pavarde>
+                    <Pareigos>Aplinkosaugos ekspertas</Pareigos>
+                    <Atlyginimas val="eur">3500.50</Atlyginimas>
+                </Darbuotojas>
+                <Darbuotojas>
+                    <Vardas>Laura</Vardas>
+                    <Pavarde>Kilmiene</Pavarde>
+                    <Pareigos>Zemes pirkimu koordinatore</Pareigos>
+                    <Atlyginimas val="eur">3000.00</Atlyginimas>
+                </Darbuotojas>
+            </Komanda>
+        </Projektas>
+    </Projektai>
+</Statybos_imone>

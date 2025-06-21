@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Statybos_imone xmlns="http://www.example.com/default">
+    <Pavadinimas>Stata</Pavadinimas>
+    <Projektai>
+        <Projektas salis="Lietuva">
+            <Pavadinimas kalba="lt">Valakampiu tiltas</Pavadinimas>
+            <Pradzios_data>2021-05-01</Pradzios_data>
+            <Prioritetas>5</Prioritetas>
+            <Komanda xmlns:kmd="http://www.example.com/komanda">
+                <kmd:Darbuotojas tipas="samdytinis">
+                    <kmd:Vardas>Pranas</kmd:Vardas>
+                    <kmd:Pavarde>Juskus</kmd:Pavarde>
+                    <kmd:Pareigos>Statybininkas</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">2000.00</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+                <kmd:Darbuotojas tipas="vadovas">
+                    <kmd:Vardas>Algirdas</kmd:Vardas>
+                    <kmd:Pavarde>Duzgys</kmd:Pavarde>
+                    <kmd:Pareigos>Architektas</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">5000.89</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+                <kmd:Darbuotojas tipas="konsultantas">
+                    <kmd:Vardas>Algimantas</kmd:Vardas>
+                    <kmd:Pavarde>Pliateris</kmd:Pavarde>
+                    <kmd:Pareigos>Aplinkosaugos ekspertas</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">4000.53</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+            </Komanda>
+        </Projektas>
+        <Projektas salis="Ispanija">
+            <Pavadinimas kalba="es">Tronco de rio</Pavadinimas>
+            <Pradzios_data>2023-02-10</Pradzios_data>
+            <Prioritetas>3</Prioritetas>
+            <Komanda xmlns:kmd="http://www.example.com/komanda">
+                <kmd:Darbuotojas tipas="vadovas">
+                    <kmd:Vardas>Mantas</kmd:Vardas>
+                    <kmd:Pavarde>Virbelis</kmd:Pavarde>
+                    <kmd:Pareigos>Projekto koordinatorius</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">6000.99</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+                <kmd:Darbuotojas tipas="samdytinis">
+                    <kmd:Vardas>Juan</kmd:Vardas>
+                    <kmd:Pavarde>Castor</kmd:Pavarde>
+                    <kmd:Pareigos>Statybininkas</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">2000.01</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+                <kmd:Darbuotojas tipas="samdytinis">
+                    <kmd:Vardas>Miguel</kmd:Vardas>
+                    <kmd:Pavarde>Nutria</kmd:Pavarde>
+                    <kmd:Pareigos>Krano operatorius</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">2500.50</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+                <kmd:Darbuotojas tipas="konsultantas">
+                    <kmd:Vardas>John</kmd:Vardas>
+                    <kmd:Pavarde>Smith</kmd:Pavarde>
+                    <kmd:Pareigos>Tarptautines komandos koordinatorius</kmd:Pareigos>
+                    <kmd:Atlyginimas val="usd">4000.00</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+            </Komanda>
+        </Projektas>
+        <Projektas>
+            <Pavadinimas kalba="en">Rail Baltica</Pavadinimas>
+            <Pradzios_data>2025-06-01</Pradzios_data>
+            <Prioritetas>10</Prioritetas>
+            <Komanda xmlns:kmd="http://www.example.com/komanda">
+                <kmd:Darbuotojas tipas="vadovas">
+                    <kmd:Vardas>Simonas</kmd:Vardas>
+                    <kmd:Pavarde>Latgalis</kmd:Pavarde>
+                    <kmd:Pareigos>Vyriausiasis inžinierius</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">8999.99</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+                <kmd:Darbuotojas tipas="konsultantas">
+                    <kmd:Vardas>Ineta</kmd:Vardas>
+                    <kmd:Pavarde>Tiruma</kmd:Pavarde>
+                    <kmd:Pareigos>Europos Sajungos teises eksperte</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">5000.11</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+                <kmd:Darbuotojas tipas="konsultantas">
+                    <kmd:Vardas>Marten</kmd:Vardas>
+                    <kmd:Pavarde>Liiv</kmd:Pavarde>
+                    <kmd:Pareigos>Aplinkosaugos ekspertas</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">3500.50</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+                <kmd:Darbuotojas>
+                    <kmd:Vardas>Laura</kmd:Vardas>
+                    <kmd:Pavarde>Kilmiene</kmd:Pavarde>
+                    <kmd:Pareigos>Zemes pirkimu koordinatore</kmd:Pareigos>
+                    <kmd:Atlyginimas val="eur">3000.00</kmd:Atlyginimas>
+                </kmd:Darbuotojas>
+            </Komanda>
+        </Projektas>
+    </Projektai>
+</Statybos_imone>

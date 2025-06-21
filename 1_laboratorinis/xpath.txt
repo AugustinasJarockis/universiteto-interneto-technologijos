@@ -1,0 +1,24 @@
+1. Statybos_imone/Projektai/Projektas[1]/Komanda/kmd:Darbuotojas[2]
+  a. Statybos_imone/Projektai/Projektas[1]/Komanda/kmd:Darbuotojas[2]/ancestor::Projektas
+  b. Statybos_imone/Projektai/Projektas[1]/Komanda/kmd:Darbuotojas[2]/descendant::*
+  c. Statybos_imone/Projektai/Projektas[1]/Komanda/kmd:Darbuotojas[2]/following-sibling::*
+  d. Statybos_imone/Projektai/Projektas[1]/Komanda/kmd:Darbuotojas[2]/preceding-sibling::*
+  e. Statybos_imone/Projektai/Projektas[1]/Komanda/kmd:Darbuotojas[2]/following::*
+  f. Statybos_imone/Projektai/Projektas[1]/Komanda/kmd:Darbuotojas[2]/preceding::*
+  g. Statybos_imone/Projektai/Projektas[1]/Komanda/kmd:Darbuotojas[2]/attribute::*
+2. /descendant::Projektas/Komanda/kmd:Darbuotojas[kmd:Atlyginimas>/descendant::Projektas[1]/Komanda/kmd:Darbuotojas[3]/kmd:Atlyginimas]
+3. count(//child::*/text()[normalize-space()])
+4. 
+  a. /descendant::Projektas[1]/Komanda/kmd:Darbuotojas[kmd:Atlyginimas < "3500"]
+  b. /descendant::Projektas[1]/Komanda/kmd:Darbuotojas[kmd:Atlyginimas = "4000.53"]
+  c. /descendant::Projektas[1]/Komanda/kmd:Darbuotojas[1]/kmd:Atlyginimas + /descendant::Projektas[1]/Komanda/kmd:Darbuotojas[3]/kmd:Atlyginimas/text()
+  d. string(/descendant::Projektas[1]/Komanda/kmd:Darbuotojas[1]/kmd:Atlyginimas/text()) + bool(/descendant::Projektas[1]/Komanda/kmd:Darbuotojas[3]/kmd:Atlyginimas/text())
+  e. /descendant::Projektas[1]/Komanda/kmd:Darbuotojas[1]/kmd:Atlyginimas < //Projektas[1]/Komanda/kmd:Darbuotojas[3]/kmd:Vardas
+5. /descendant::Projektas[@*]/Komanda[count(child::kmd:Darbuotojas) = 4]/kmd:Darbuotojas[count(following-sibling::*) = 0 or count(preceding-sibling::*) = 0]
+6. 
+  a. /descendant::Projektas/Komanda/kmd:Darbuotojas/kmd:Atlyginimas = number(/descendant::Projektas[1]/Komanda/kmd:Darbuotojas[1]/kmd:Atlyginimas)
+  b. /descendant::Projektas/Komanda/kmd:Darbuotojas/kmd:Vardas = string(/descendant::Projektas[1]/Komanda/kmd:Darbuotojas[1]/kmd:Vardas)
+  c. /descendant::Projektas/Komanda/kmd:Darbuotojas/kmd:Vardas = true
+  d. /descendant::Projektas[1]/Komanda/kmd:Darbuotojas/kmd:Vardas = /descendant::Projektas[3]/Komanda/kmd:Darbuotojas/kmd:Vardas
+7. /descendant::Projektas[1]/Komanda/kmd:Darbuotojas/kmd:Vardas < /descendant::Projektas[2]/Komanda/kmd:Darbuotojas/kmd:Vardas
+
